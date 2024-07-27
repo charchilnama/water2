@@ -2,6 +2,8 @@
 
 # जलनीति: Comprehensive Water Management System
 
+![JalNeeti](https://github.com/user-attachments/assets/49bac78b-e435-45b8-8517-74f5aaaea4fd)
+
 ## Overview
 
 जलनीति is a water supply and management system that integrates sensor data collection, data analysis, and leakage detection. The system provides detailed insights into water distribution across different levels (Zone, Ward, Colony, Home), helping to monitor and manage water resources efficiently.
