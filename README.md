@@ -31,6 +31,21 @@
 ### Frontend Dashboard
 - Visual representation of water data
 - Interactive charts showing distribution and usage.
+
+## Images:
+
+![image](https://github.com/user-attachments/assets/e9900e35-30b9-46e9-8789-7b1c4e0651d9)
+
+![image](https://github.com/user-attachments/assets/9333125f-bb5a-49ed-9d85-411751b0b38b)
+
+![image](https://github.com/user-attachments/assets/c16d4dea-6b32-41be-8493-1897b9d01781)
+
+![image](https://github.com/user-attachments/assets/5c103d07-c188-4e4d-a053-fffafad880e9)
+
+![image](https://github.com/user-attachments/assets/6aaf444d-5c55-4997-98f1-44290f897d64)
+
+
+
 ## Installation
 ### Clone the Repository
 ```
