@@ -1,0 +1,155 @@
+/* General Body Styling */
+body {
+    font-family: 'Georgia Pro', Georgia, serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.changeTheme {
+    background: #1D1E22;
+    color: #eee;
+  }
+
+/* Sidebar Styling */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #343a40; /* Dark grey background for the sidebar */
+    color: black; /* Black text color for sidebar */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.3s;
+    border-right: 2px solid #495057; /* Vertical line to separate sidebar from main content */
+}
+
+#sidebar .sidebar-header {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 0; /* Remove bottom border from sidebar header */
+}
+
+#sidebar .sidebar-header img {
+    width: 150px;
+}
+
+#sidebar .nav {
+    padding: 15px;
+    padding-top: 0;
+}
+
+#sidebar .nav-link {
+    color: black; /* Black text color for links */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Ensure links do not have underline */
+}
+
+#sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+/* Highlight the active link */
+#sidebar .nav-link.active,
+#sidebar .nav-link:hover {
+    background-color: #495057; /* Darker grey for hover and active state */
+    color: #ffffff; /* White text on hover/active */
+}
+
+/* Ensure sub-links are not automatically highlighted */
+#sidebar .nav-link.sub-page {
+    background-color: transparent; /* No background color for sub-page links */
+    color: black; /* Keep text color black */
+}
+
+#sidebar .nav-link.sub-page:hover {
+    background-color: transparent; /* No background color on hover for sub-pages */
+}
+
+/* Main Content Area */
+main {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+}
+
+/* Dashboard and Metrics Section */
+.container-fluid {
+    padding: 20px;
+}
+
+.card {
+    border: none;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1.5rem;
+}
+
+/* Chart Section */
+canvas {
+    max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
+/* Page Specific Styles */
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Header and Page Titles */
+h1, h4 {
+    color: #343a40;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.row.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, .card-title {
+    font-family: 'Georgia Pro', Georgia, serif;
+}
+
+.card-body, .navbar, .sidebar-header, .nav-link {
+    font-family: 'Georgia Pro', Georgia, serif;
+}
+
+a {
+    font-family: 'Georgia Pro', Georgia, serif;
+    text-decoration: none;
+}

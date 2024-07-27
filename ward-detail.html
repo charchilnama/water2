@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ward Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="d-flex">
+        <nav id="sidebar" class="bg-light">
+            <div class="sidebar-header">
+                <img src="JalNeeti.png" alt="AquaFlow Logo" class="img-fluid mb-3">
+                <h4>AquaFlow</h4>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="zones.html">
+                        <i class="fas fa-water"></i> Zones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="wards.html">
+                        <i class="fas fa-building"></i> Wards
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="colonies.html">
+                        <i class="fas fa-house-user"></i> Colonies
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="homes.html">
+                        <i class="fas fa-home"></i> Homes
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main role="main" class="flex-fill">
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Ward Details</h1>
+                </div>
+
+                <!-- Ward Metrics -->
+                <div class="container mt-5">
+                    <h4>Metrics for Ward: <span id="ward-name"></span></h4>
+                    <!-- Summary Cards -->
+                    <div class="row mb-4">
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-white bg-primary">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Water Supply</h5>
+                                    <p class="card-text" id="total-supply">150,000 Liters</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-white bg-success">
+                                <div class="card-body">
+                                    <h5 class="card-title">Water Availability</h5>
+                                    <p class="card-text" id="water-availability">85% Availability</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-white bg-warning">
+                                <div class="card-body">
+                                    <h5 class="card-title">Leakage Detected</h5>
+                                    <p class="card-text" id="leakages">5 Leaks</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card text-white bg-danger">
+                                <div class="card-body">
+                                    <h5 class="card-title">Critical Issues</h5>
+                                    <p class="card-text" id="critical-issues">1 Critical Issue</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Section -->
+                    <div class="row">
+                        <!-- Distribution by Colonies -->
+                        <div class="col-md-6 mb-4">
+                            <h4>Water Distribution by Colonies</h4>
+                            <canvas id="distributionChart"></canvas>
+                        </div>
+                        <!-- Usage Overview -->
+                        <div class="col-md-6 mb-4">
+                            <h4>Water Usage Overview</h4>
+                            <canvas id="usageChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        // Sample Data for Charts
+        const urlParams = new URLSearchParams(window.location.search);
+        const ward = urlParams.get('ward');
+        document.getElementById('ward-name').textContent = `Ward ${ward}`;
+        
+        // Example data for charts, you need to fetch this data dynamically
+        const ctxDistribution = document.getElementById('distributionChart').getContext('2d');
+        const distributionChart = new Chart(ctxDistribution, {
+            type: 'pie',
+            data: {
+                labels: ['Colony 1', 'Colony 2', 'Colony 3', 'Colony 4'],
+                datasets: [{
+                    label: 'Water Distribution',
+                    data: [25, 25, 25, 25],
+                    backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545'],
+                }]
+            }
+        });
+
+        const ctxUsage = document.getElementById('usageChart').getContext('2d');
+        const usageChart = new Chart(ctxUsage, {
+            type: 'bar',
+            data: {
+                labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
+                datasets: [{
+                    label: 'Water Usage',
+                    data: [100, 120, 140, 160, 180],
+                    backgroundColor: '#007bff',
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaFlow Colonies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="d-flex">
+        <nav id="sidebar" class="bg-light">
+            <div class="sidebar-header">
+                <img src="JalNeeti.png" alt="AquaFlow Logo" class="img-fluid mb-3">
+                <h4>AquaFlow</h4>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="zones.html">
+                        <i class="fas fa-water"></i> Zones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wards.html">
+                        <i class="fas fa-building"></i> Wards
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="colonies.html">
+                        <i class="fas fa-house-user"></i> Colonies
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="homes.html">
+                        <i class="fas fa-home"></i> Homes
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main role="main" class="flex-fill">
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Colonies</h1>
+                </div>
+
+                <!-- Colonies List -->
+                <div class="container mt-5">
+                    <div class="row">
+                        <!-- Colony 1 -->
+                        <div class="col-md-4 mb-4">
+                            <a href="colony-detail.html?colony=1" style="text-decoration:none;color: black;border: 0.5px solid black;" class="card">
+                                <img src="Colony1.jpg" class="card-img-top" alt="Colony 1">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Colony 1</b></h5>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Colony 2 -->
+                        <div class="col-md-4 mb-4">
+                            <a href="colony-detail.html?colony=2" style="text-decoration:none;color: black;border: 0.5px solid black;" class="card">
+                                <img src="Colony2.jpg" class="card-img-top" alt="Colony 2">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Colony 2</b></h5>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Add more colonies as needed -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
