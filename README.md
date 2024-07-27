@@ -1,4 +1,4 @@
-# HackNdore
+![hackndore img](https://github.com/user-attachments/assets/e686b5f9-971a-45d7-8086-dd8dd6714483)
 
 # जलनीति: Comprehensive Water Management System
 
