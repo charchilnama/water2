@@ -46,6 +46,9 @@
 
 ![image](https://github.com/user-attachments/assets/6aaf444d-5c55-4997-98f1-44290f897d64)
 
+### Algorithm
+
+![Algorithm  ](https://github.com/user-attachments/assets/761659eb-e5e5-4982-b8fd-8da85d4240aa)
 
 
 ## Installation
